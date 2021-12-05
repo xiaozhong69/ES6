@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  set没有重复的元素-----成员具有唯一性，自动去重
+        let arr = ['tom','jarry','susan','tom','jarry','susan'];
+        
+        //  创建set对象
+        let s1 = new Set(arr);
+        console.log(s1);
+
+        //          *******面试题********
+        //     set结构如何判断元素值是否相等
+        //     答：===进行判断，但是NaN除外
+        //  NaN是集合 NaN===NaN -----> false
+        //  但是set中认为NaN相等
+
+    </script>
+</body>
+</html>

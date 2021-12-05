@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>11</div>
+    <div>22</div>
+    <input type="button" id="t1" value="点击按钮删除11">
+</body>
+<script>
+    var divs=document.getElementsByTagName("div");
+    var ws=new WeakSet();
+    ws.add(divs);
+    console.log(ws);
+
+    var t1=document.getElementById("t1");
+    t1.onclick=()=>{
+        divs[0].remove(); // DOM节点删除，WeakSet中的DOM对象自动销毁
+        console.log(ws);
+    }
+</script>
+</html>

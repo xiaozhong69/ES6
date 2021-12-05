@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let m1=new Map();
+        let obj1={name:"tom",age:21,sex:"男"};
+        let obj2={name:"jarry",age:24,sex:"男"};
+        let obj3={name:"susan",age:20,sex:"女"};
+
+        m1.set(obj1,"boy1").set(obj2,"boy2").set(obj3,"girl");
+
+        // 注意key和value参数的位置
+        m1.forEach((value,key)=>{
+            console.log(value,key);
+        })
+        
+    </script>
+</body>
+</html>

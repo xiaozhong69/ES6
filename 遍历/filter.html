@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //  非变异方法 返回新数组
+       //  return true保留/false删除
+       let arr=['语文','数学','历史','英语'];
+        let arr2=arr.filter((value,index)=>{
+            console.log(value,index);
+            if(value==='历史'){
+                return false;  //元素删除
+            }
+            return true;  //元素保留
+        })
+        console.log(arr);
+        console.log(arr2);
+    </script>
+</body>
+</html>

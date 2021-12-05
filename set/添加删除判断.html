@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let arr = ['tom','jarry','susan','刘能'];
+        let s1 = new Set(arr);
+        console.log('原Set集合',s1);
+
+        //  add() 添加值
+        s1.add("钟贞长");
+        console.log('增加一个值',s1);
+
+        //  delete() 删除值
+        s1.delete("tom");
+        console.log('删除一个值',s1);
+
+        //  has() 判断是否含有值
+        console.log('判断是否含有jarry----->',s1.has("jarry"));
+
+        //  clear() 清除所有值
+        s1.clear();
+        console.log('clear()之后',s1);
+
+
+    </script>
+</body>
+</html>

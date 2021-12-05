@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // todolist
+        let todoDatas=[ 
+            {id:"1",title:"今天上午吃鸡蛋喝豆浆",hasCompleted:true},
+            {id:"2",title:"今天中午吃红烧肉",hasCompleted:true},
+            {id:"3",title:"今天晚上喝牛肉汤",hasCompleted:false},
+        ]
+        
+        let [...todo]=todoDatas;
+        for(let value of todo){
+            console.log(value);
+        }
+
+        todoDatas = todoDatas.filter(sele=>{
+            if(sele.id==="2"){
+                return false;
+            }
+            return true;
+        })
+        console.log(todoDatas);
+    </script>
+</body>
+</html>

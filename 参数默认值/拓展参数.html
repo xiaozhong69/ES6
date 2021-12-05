@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // ... 在函数调用的实参的前面 -- 拓展参数
+        // ...rest 解构赋值变量前 --拓展参数
+
+        var people = ['tom','jarry','susan'];
+        var test = (...p)=>{
+            console.log(`${p[0]}  ${p[1]}  ${p[2]} ${p[3]}`);
+        }
+        test(...people,第四个参数)
+    </script>
+</body>
+</html>

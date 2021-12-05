@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // rest 解构
+        // ... 拓展运算符--基于iterator--隐式迭代 
+        let {name,...rest}={name:"tom",age:19,sex:"男"};
+        // rest 接收剩下对象所有的对象成为一个子对象
+        // rest 变量的值是 {age:19,sex:"男"}
+
+        //对象解构赋值，给变量起别名 id ---> sid
+        let {id:sid,...obj}={id:1,title:"标题",content:"内容"};
+        
+        /* jsx react 组件属性名必须小写
+           组件名必须大写
+           如果你通过属性传递的是一个组件名称
+        */
+    
+    </script>
+</body>
+</html>

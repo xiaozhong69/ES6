@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解构赋值</title>
+</head>
+<body>
+    <script>
+        // // 原始
+        // let arr=['语文','数学','历史','地理'];
+        // let x=arr[0];
+        // let y=arr[1];
+        // let z=arr[2];
+        // var h=arr[3];
+
+        // ES6 引入iterator 遍历器--自动遍历对象
+        //数组解构赋值
+        //创建四个 *变量* 然后结构数组元素赋值给对应位置的变量
+        let [x,y,z,h] = ['语文','数学','历史','地理'];
+        console.log(x);
+        console.log(y);
+        console.log(z);
+        console.log(h);
+    </script>
+</body>
+</html>

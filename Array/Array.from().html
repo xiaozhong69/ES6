@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let arr = ['tom','jarry','susan','tom','jarry','susan'];
+        let s1 = new Set(arr);
+        console.log(s1);
+
+        //  ES6 提供新数组API，可以将其他结构对象转换为数组对象
+        //  Array.from() 静态方法--通过类名访问的方法
+        let arr2 = Array.from(s1);
+
+        console.log(arr2);
+
+    </script>
+</body>
+</html>
