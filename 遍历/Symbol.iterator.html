@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 
+        let arr = ['tom','jarry','susan'];
+        console.log(arr);
+        
+        //  等价于 for(let value of arr.values())
+        let iter=arr[Symbol.iterator]();
+        
+        // iter.next() 返回 {value:"",done:}
+        for(let i=0;i<=arr.length;i++){
+            console.log(iter.next());
+        }
+
+        // done为true或者带有返回值return 遍历结束
+
+        //  遍历Set
+        let s1 = new Set(arr);
+        //  等价于 for(let value of arr.values())
+        let iter2=s1[Symbol.iterator]();
+        
+        // iter.next() 返回 {value:"",done:}
+        for(let i=0;i<=s1.size;i++){
+            console.log(iter2.next());
+        }
+
+        // 总结 可以遍历除了Object以外的所有数据结构
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //   generator函数:
+        //      function*(){
+        //         yield 语句; // yield状态 阻塞执行
+        //         ......;
+        //       }
+
+        let gen = function*(){
+            yield console.log("tom");
+            yield console.log("jarry");
+            yield console.log("susan");
+        }
+        //调用 generator函数，返回一个遍历器对象
+        let iter=gen();
+        console.log(iter.next());
+        console.log(iter.next());
+        console.log(iter.next());
+        console.log(iter.next());
+
+        // generator函数遍历结束的情况：
+        // 1. 最后一条yield语句执行完毕，再次执行iter.next()
+        // 2. 遇到return
+
+        // 作用：
+        // 1、改写异步promise 
+        // 2、解决地狱回调问题
+  
+  </script>
+</body>
+</html>

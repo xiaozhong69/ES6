@@ -1,0 +1,17 @@
+// 地狱回调：异步操作层层嵌套，后面的操作依赖前边的操作
+    
+         ------------例子-------------
+         $.ajax({
+             url:"",
+             type:"",
+             dataType:"",
+             success:function(data){},
+             complete:function(){
+                 $.ajax({
+                 url:"",
+                     type:"",
+                     dataType:"",
+                     success:function(data){},
+                 })
+             }
+         })

@@ -1,0 +1,25 @@
+       
+       
+    如何开启 ---------- "use strict" -----------
+
+严格模式下变量的作用：
+    1. 全局作用域-----（少用）针对整个脚本生效
+        <script>
+            "use strict";
+            其他代码;
+        <script>
+
+    2. 局部作用域-----（常用） 缺点：不利于脚本合并
+        function strict(){
+            "use strict";
+            return "这是严格模式";
+        }
+        
+    3. eval作用域-----（严格模式），严格模式下eval语句本身就是一个作用域，生成的变量只能作用域eval内部
+        "use strict";
+        var x=10;
+        eval("var y=20");
+        function test(){
+            console.log(x);
+            console.log(y); //报错，y未定义
+        }
