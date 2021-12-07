@@ -15,3 +15,24 @@
                  })
              }
          })
+
+解决地狱回调问题：Promise异步操作，串行执行
+    ajax1().then(res=>{
+        console.log("1");
+        return ajax2().then(res=>{
+            console.log("2");
+            return ajax3().then(res=>{
+                console.log("3");
+            })
+        })
+    })
+    // Promise不能很好的解决地狱回调问题
+       ------没有解决层层嵌套，代码可读性不强
+
+**********面试题**********
+如何解决地狱回调问题
+    答: （1）generator
+            function*(){
+                yield 语句; // yield状态 阻塞执行
+            }
+        （2）async await 关键词
